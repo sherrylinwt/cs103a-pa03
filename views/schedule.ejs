@@ -1,18 +1,12 @@
-<ul>
+<div class="d-flex flex-wrap">
     <% for (course of courses){%>
-        <li> 
-            <a href="/schedule/remove/<%= course._id %>">X</a>
+        <div class="p-3 m-3 bg-info border border-primary border-5">
             <%= course['subject'] %>
             <%= course.coursenum %>
             <%= course.name %>
             <%= course.term %>
-            
-        </li>
-    <% } %>
-</ul>
 
-<!--
-    <pre>
-        <%= JSON.stringify(courses,null,5) %>
-    </pre>
--->
+        </div>
+    <% } %>
+
+</div>

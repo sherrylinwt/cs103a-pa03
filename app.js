@@ -310,7 +310,7 @@ app.post('/courses/byKeyword',
     const {keyword} = req.body; 
     const courses = 
        await Course
-               .find({name: "$regex": keyword, "$options": "i"})
+               .find({name: {"$regex": keyword, "$options": "i"}})
                .sort({term:1,num:1,section:1})
     //res.json(courses)
     res.locals.courses = courses
